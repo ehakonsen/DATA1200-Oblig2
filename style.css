@@ -1,7 +1,6 @@
 /*Screens < 600px
 General configurations
 */
-@media only screen and (max-width: 600px) {
 
     html {
         font-size: 14px;
@@ -64,9 +63,7 @@ General configurations
 
     /*#intro-container
     This is the first article inside the main container.
-    • Look at the mock-up and decide what padding/margin you should use
-    (Figure 1) 
-    • The colour of the background is #c5192d (hint: you may need to use
+       • The colour of the background is #c5192d (hint: you may need to use
     pseudo-elements to create this background. If so, you may need to adjust
     the z-index of the different elements. The z-index accepts both negative
     and positive values)
@@ -74,6 +71,7 @@ General configurations
 
     #intro-container {
         background-color: #c5192d;
+        padding: 30px;
     }
 
     ul {
@@ -96,5 +94,36 @@ General configurations
     li:nth-child(3)::before {
         content: "\1F4DA";
     }
-    
+
+    /*Other <article>s
+You may notice that the “odd” articles (except the first one) have the <img> first
+(html code) and then the div with the text. Therefore, the images might be
+displayed in a way that it is not consistend for the user (see Figure 2).
+• (Optional task) make sure the text will be displayed on top of the images
+in all the articles (HINT: check the following codepen and remember that
+flexbox and grid layout are not allowed)
+ */
+
+ /*Screens 600px – 960 px
+This screen resolution will follow the same rules/styles presented in the previous
+screen resolution. However, some rules and parts of the layout may change
+according to the next points
+
+General configurations
+*/
+
+@media and (min-width: 600px) and (max-width: 960px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    header {
+        height: 65vh;
+    }
+
+    header > div, main, footer {
+        width: 85%;
+    }
+     
 }
