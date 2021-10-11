@@ -112,7 +112,7 @@ according to the next points
 General configurations
 */
 
-@media and (min-width: 600px) and (max-width: 960px) {
+@media (min-width: 600px) and (max-width: 960px) {
 
     html {
         font-size: 16px;
@@ -127,3 +127,4 @@ General configurations
     }
      
 }
+
