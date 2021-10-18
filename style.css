@@ -54,9 +54,9 @@ header {
 header > div {
     background-color: #c5192d;
     text-align: center;
-    color: white;
+    color: whitesmoke;
     position: absolute;
-    max-width: 95vw;
+    width: 95vw;
     margin: 0 2.5vw;
     bottom: -4rem;
 }
@@ -131,19 +131,71 @@ img {
     padding: 2rem;
 }
 
-img:nth-of-type(1) {
+img:nth-child(2) {
     border-bottom: 0.1px solid darkgrey;
 }
 
 footer {
     background-color: #c5192d;
-    color: white;
+    color: whitesmoke;
     padding: 1rem 2rem;
     text-align: center;
-    margin-top: 2rem;
+    box-sizing: border-box;
+    width: 95vw;
+    margin: 2rem auto 0;  
 }
 
 a:link {
-    color: white;
+    color: whitesmoke;
 }
+
+/*Screens 600px – 960 px
+This screen resolution will follow the same rules/styles presented in the previous
+screen resolution. However, some rules and parts of the layout may change
+according to the next points
+General configurations
+
+
+
+• Each column will be 45% wide and there will be a 10% gap between the
+two columns (Figure 3). HINT: inline elements add a space between them. 
+Therefore, this will cause the elements to be displayed in a new line if the
+sum of the width of the elements is greater than 100% (this is 50% +
+1space + 50%). CSS tricks to the rescue!
+• Observe that the image is aligned to the top of the container
+*/
+
+@media only screen and (min-width: 600px) {
+
+    html {
+        font-size: 16px;
+    }
+
+    header {
+        height: 65vh;
+    }
+
+    header > div {
+        box-sizing: border-box;
+        width: 85vw;
+        margin: 0 7.5vw;
+    }
+
+    main, footer {
+        width: 85vw;
+        margin: 0 auto; 
+    }
+
+    article > div, img {
+        box-sizing: border-box;
+        max-width: 45%;
+        display: inline-block;
+    }
+
+    #intro-container {
+        position: relative;
+    }
+
+
+  }
 
