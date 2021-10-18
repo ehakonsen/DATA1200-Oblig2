@@ -190,6 +190,8 @@ sum of the width of the elements is greater than 100% (this is 50% +
         box-sizing: border-box;
         max-width: 45%;
         display: inline-block;
+        position: relative;
+        left: 5%;
     }
 
     #intro-container {
