@@ -187,11 +187,19 @@ sum of the width of the elements is greater than 100% (this is 50% +
         width: 85vw;
         margin: 0 auto; 
     }
+    article{
+        border-bottom: 0.1px solid darkgrey;
+    }
 
     article > div, img {
         box-sizing: border-box;
         max-width: 45%;
         display: inline-block;
+    }
+    img:nth-child(2) {
+        border-bottom: none;
+        position: relative;
+        left: 2.5rem;
     }
 
     #intro-container {
@@ -201,13 +209,20 @@ sum of the width of the elements is greater than 100% (this is 50% +
         position: relative;
         padding-top: 0;
         padding-bottom: 0;
+        border-bottom: 0.1px solid darkgrey;
     }
 
     #intro-container > div {
         display: inline-block;
         vertical-align: middle;
         min-height: 100%;
-        padding: 2rem;
+        padding: 2rem 2rem 0;
+    }
+    img{
+        vertical-align: top;
+    }
+    footer{
+        margin-top: 2rem;
     }
 
     #intro-container > div:nth-of-type(1) {
@@ -227,3 +242,28 @@ sum of the width of the elements is greater than 100% (this is 50% +
  
   }
 }
+@media only screen and (min-width: 960px) {
+    
+    html{
+        font-size: 24px;
+    }
+
+    header > div {
+        box-sizing: border-box;
+        width: 70vw;
+        margin: 0 15vw;
+    }
+    #intro-container{
+        width: 70vw
+    }
+
+    main, footer {
+        width: 70vw;
+        margin: 0 auto;
+    }
+    
+    footer{
+        margin-top: 2rem;
+    }
+}
+
